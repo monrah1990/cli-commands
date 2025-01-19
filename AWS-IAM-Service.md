@@ -23,5 +23,8 @@ aws iam create-login-profile --user-name "YOUR_USER_NAME" --password "YOUR_PASSW
 aws iam get-user --user-name "YOUR_USER_NAME"
 
 aws iam create-policy --policy-name "YOUR_POLICY_NAME" --policy-document "YOUR_FILE_NAME"
+aws iam create-policy --policy-name changePwd --policy-document file://changePwdPolicy.json
+
+aws iam attach-group-policy --group-name "YOUR_GROUP_NAME" --policy-arn "YOUR_POLICY_ARN"
 
 aws iam create-access-key --user-name "YOUR_USER_NAME"
