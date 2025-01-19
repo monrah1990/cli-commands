@@ -1,0 +1,9 @@
+filter > picks components
+query > picks specific attributes of components
+ 
+aws ec2 describe-instances --filters "Name=instance-type,values=t2.micro" --query "Reservations[].instances[].instanceId"
+
+aws ec2 describe-instances --filters "Name=tag:Type,values=web-server"
+
+aws ec2 describe-instances --filters "Name=image-id,values=ami-x0123456,ami-y0123456"
+
