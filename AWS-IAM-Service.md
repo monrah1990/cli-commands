@@ -10,7 +10,9 @@ aws iam get-group --group-name "YOUR_GROUP_NAME"
 
 aws iam attach-user-policy --user-name "YOUR_USER_NAME" --policy-arn "YOUR_POLICY_ARN"
 
-aws iam list-policies --query `Policies[?PolicyName=="`YOUR_POLICY_NAME`"].Arn` --output text
+aws iam list-policies --query 'Policies[?PolicyName=="`YOUR_POLICY_NAME`"].Arn' --output text
+aws iam list-policies --query 'Policies[?PolicyName==`AmazonEC2FullAccess`].Arn' --output text
+
 
 aws iam attach-group-policy --group-name "YOUR_GROUP_NAME" --policy-arn "YOUR_POLICY_ARN"
 
